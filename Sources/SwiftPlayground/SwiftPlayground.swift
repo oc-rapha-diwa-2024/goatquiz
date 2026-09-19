@@ -1,8 +1,6 @@
 // The Swift Programming Language
 // https://docs.swift.org/swift-book
 
-@main
-
 
 // for multiple choice
 /// Structure for each question in the game.
@@ -16,7 +14,7 @@ struct GameQuestion {
 
     /// Prints the questions, options, and answers.
     func showQuestionsAndAnswers() {
-        print("\(bold)\(question) \(reset)\n")
+        print("\(question) \n")
         // Each option is printed one-by-one from the list.
         for (option) in options.enumerated() {
             print(option)
@@ -50,4 +48,24 @@ func input(forString prompt: String) -> String? {
     return userInput
 }
 
+/// Prints the intro text
+/// 
+func printIntro(){
+    print("""
+    WELCOME TO GOAT QUIZ 
 
+    wager
+    you will ne given a set of questions with 4 answers
+    pick the righjt ansewr for money
+
+    GOOD LUCK......
+    """)
+}
+
+
+@main
+struct SwiftPlayground {
+    static func main() {
+        printIntro()
+    }
+}
